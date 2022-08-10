@@ -1,0 +1,33 @@
+.main {
+  &__title {
+    margin: 0 0 30px 0;
+    color: $yellow;
+  }
+
+  &__form-add-task {
+    margin: 0 0 30px 0;
+  }
+
+  &__save-upload {
+    margin: 0 0 10px 0;
+  }
+
+  &__readonly {
+    margin: 0 0 30px 0;
+  }
+
+  &__search {
+    margin: 0 0 10px 0;
+  }
+
+  &__filter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 0 30px 0;
+  }
+
+  &__tasks {
+    margin: 0 0 30px 0;
+  }
+}

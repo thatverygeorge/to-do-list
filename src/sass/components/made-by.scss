@@ -1,0 +1,23 @@
+.made-by {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &__title {
+    margin: 0;
+    text-align: end;
+    color: $yellow;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    text-align: end;
+  }
+}
