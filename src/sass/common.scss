@@ -1,0 +1,105 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link {
+  color: $black;
+  outline: none;
+  text-decoration-color: $yellow;
+  text-decoration-thickness: 2px;
+
+  &:focus-visible,
+  &:hover {
+    text-decoration-color: $black;
+  }
+}
+
+.button,
+.input,
+.task-text {
+  width: 100%;
+  max-height: 235px;
+  min-height: 35px;
+  padding: 5px;
+  border: 2px solid $yellow;
+  border-radius: 5px;
+  background-color: $white;
+  color: $black;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  outline: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:focus-visible,
+  &:hover {
+    border-color: $black;
+  }
+
+  &:disabled {
+    border-color: $black;
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+
+.input {
+  &::placeholder {
+    opacity: 1;
+    color: inherit;
+  }
+
+  &:checked {
+    + .button {
+      border-color: $yellow;
+    }
+  }
+
+  &:focus-visible,
+  &:hover {
+    border-color: $black;
+
+    + .button {
+      border-color: $black;
+    }
+  }
+
+  &:disabled {
+    border-color: $black;
+    opacity: 0.3;
+    cursor: default;
+
+    + .button {
+      border-color: $black;
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+}
+
+@media (width < 620px) {
+  .button,
+  .input,
+  .task-text {
+    min-height: 55px;
+  }
+}
+

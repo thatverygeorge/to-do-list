@@ -1,0 +1,37 @@
+.form-add-task {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 20px;
+  background-color: $gray;
+  border-radius: 15px;
+
+  &__input-task {
+    grid-column: span 2;
+    resize: vertical;
+    height: 100%;
+  }
+
+  &__button-submit {
+    grid-column: span 2;
+  }
+}
+
+@media (width < 620px) {
+  .form-add-task {
+    &__input-task {
+      grid-column: span 3;
+    }
+
+    &__type-selector {
+      grid-column: span 3;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__button-submit {
+      grid-column: span 3;
+    }
+  }
+}
+

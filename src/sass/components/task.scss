@@ -1,0 +1,65 @@
+.task-item {
+  position: relative;
+  padding: 20px;
+  background-color: $gray;
+  border-radius: 15px;
+  border: 2px solid;
+
+  &--all {
+    border-color: $yellow;
+  }
+
+  &--work {
+    border-color: $red;
+  }
+
+  &--life {
+    border-color: $green;
+  }
+
+  &--other {
+    border-color: $blue;
+  }
+}
+
+.task {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  &__text {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    grid-column: span 3;
+    margin: 0;
+  }
+
+  &__input-task {
+    grid-column: span 2;
+  }
+}
+
+.task-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  &--done {
+    text-decoration: line-through;
+    opacity: 0.3;
+  }
+}
+
+@media (width < 620px) {
+  .task {
+    &__input-task {
+      grid-column: span 3;
+    }
+
+    &__type-selector {
+      grid-column: span 3;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+

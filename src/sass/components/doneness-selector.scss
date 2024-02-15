@@ -1,0 +1,11 @@
+.doneness-selector {
+  display: grid;
+  gap: 10px;
+
+  &__button {
+    border-color: $gray;
+    background-color: $white;
+    color: $black;
+  }
+}
+
