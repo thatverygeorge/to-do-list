@@ -20,6 +20,10 @@
   &--other {
     border-color: $blue;
   }
+
+  &--done {
+    opacity: 0.3;
+  }
 }
 
 .task {
@@ -36,6 +40,7 @@
   }
 
   &__input-task {
+    resize: vertical;
     grid-column: span 2;
   }
 }
@@ -43,11 +48,6 @@
 .task-text {
   white-space: pre-wrap;
   word-break: break-word;
-
-  &--done {
-    text-decoration: line-through;
-    opacity: 0.3;
-  }
 }
 
 @media (width < 620px) {

@@ -57,7 +57,11 @@ function Task(props: ITaskProps) {
   }
 
   return (
-    <li className={`task-item task-item--${task.type} task-list__item`}>
+    <li
+      className={`task-item task-item--${task.type} ${
+        task.isDone ? "task-item--done" : ""
+      } task-list__item`}
+    >
       <article className="task task-list__task" ref={taskRef}>
         {isEditing ? (
           <TaskEditor
@@ -68,9 +72,7 @@ function Task(props: ITaskProps) {
             autoFocus={true}
           />
         ) : (
-          <pre className={`task__text task-text ${task.isDone ? "task-text--done" : ""}`.trim()}>
-            {task.text}
-          </pre>
+          <pre className="task__text task-text">{task.text}</pre>
         )}
 
         <button
