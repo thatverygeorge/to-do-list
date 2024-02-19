@@ -23,7 +23,7 @@ function ButtonReadonly(props: IButtonReadonlyProps) {
         readonly
       </label>
       <span className="visually-hidden" role="status" aria-live="polite">
-        {isReadonly ? "readonly is on" : "readonly is off"}
+        {isReadonly ? "read-only is on" : "read-only is off"}
       </span>
     </section>
   );

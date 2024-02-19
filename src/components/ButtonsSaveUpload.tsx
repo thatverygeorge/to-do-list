@@ -44,7 +44,7 @@ function ButtonsSaveUpload(props: IButtonsSaveUploadProps) {
           disabled={isReadonly}
         />
         <label className="button button-upload save-upload__button-upload" htmlFor={id}>
-          upload
+          load
         </label>
       </div>
     </section>
