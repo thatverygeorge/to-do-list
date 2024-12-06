@@ -24,13 +24,11 @@
     width: 100%;
   }
 
-  &__save-upload {
-    flex-grow: 1;
-  }
-
-  &__readonly {
-    flex-grow: 1;
-    flex-basis: 0;
+  &__buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   &__right-column {
@@ -46,9 +44,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 20px;
-    background-color: $gray;
-    border-radius: 15px;
   }
 
   &__made-by {

@@ -17,7 +17,7 @@ function TaskList(props: ITaskListProps) {
   if (filteredTasks.length === 0) {
     return (
       <section className={`tasks ${modifier}__tasks`}>
-        <p className="tasks__not-found">no tasks to show</p>
+        <p className="tasks__not-found container">no tasks to show</p>
       </section>
     );
   }

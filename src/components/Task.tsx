@@ -60,7 +60,7 @@ function Task(props: ITaskProps) {
     <li
       className={`task-item task-item--${task.type} ${
         task.isDone ? "task-item--done" : ""
-      } task-list__item`}
+      } task-list__item container`}
     >
       <article className="task task-list__task" ref={taskRef}>
         {isEditing ? (

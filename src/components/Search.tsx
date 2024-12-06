@@ -13,7 +13,7 @@ function Search(props: ISearchProps) {
   }
 
   return (
-    <section className={`search ${modifier}__search`}>
+    <section className={`search ${modifier}__search container`}>
       <input
         className="input input-search search__input"
         type="search"

@@ -71,21 +71,19 @@ function Toast() {
   }
 
   return ReactDOM.createPortal(
-    <>
-      <div className="toast" onClick={handleOverlayClick}>
-        <div className="toast__wrapper">
-          <p className="toast__message">{toast.message}</p>
-          <button
-            ref={buttonCloseRef}
-            className="toast__button-close"
-            type="button"
-            aria-label="close toast"
-            onClick={handleButtonCloseClick}
-            autoFocus
-          />
-        </div>
+    <div className="toast" onClick={handleOverlayClick}>
+      <div className="toast__wrapper container">
+        <p className="toast__message">{toast.message}</p>
+        <button
+          ref={buttonCloseRef}
+          className="toast__button-close button"
+          type="button"
+          aria-label="close toast"
+          onClick={handleButtonCloseClick}
+          autoFocus
+        />
       </div>
-    </>,
+    </div>,
     document.querySelector('#portal') as HTMLElement
   );
 }

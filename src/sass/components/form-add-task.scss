@@ -3,9 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   align-items: start;
-  padding: 20px;
-  background-color: $gray;
-  border-radius: 15px;
 
   &__input-task {
     grid-column: span 2;

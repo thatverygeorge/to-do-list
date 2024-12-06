@@ -99,5 +99,3 @@ export function upload(file: File) {
     });
   }
 }
-
-export const tasksLength = computed([tasks], (all) => all.length);

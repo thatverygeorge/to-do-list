@@ -9,7 +9,6 @@ interface IButtonsSaveUploadProps {
 }
 
 function ButtonsSaveUpload(props: IButtonsSaveUploadProps) {
-  const { modifier } = props;
   const id = useId();
 
   const downloadURL = useStore(downloadURLStore);
@@ -22,16 +21,14 @@ function ButtonsSaveUpload(props: IButtonsSaveUploadProps) {
   }
 
   return (
-    <section className={`save-upload ${modifier}__save-upload`}>
-      <div>
-        <a
-          className="button button-save save-upload__button-save"
-          href={downloadURL}
-          download="just-do-it-tasks.json"
-        >
-          save
-        </a>
-      </div>
+    <>
+      <a
+        className="button button-save save-upload__button-save"
+        href={downloadURL}
+        download="just-do-it-tasks.json"
+      >
+        save
+      </a>
 
       <div>
         <input
@@ -47,7 +44,7 @@ function ButtonsSaveUpload(props: IButtonsSaveUploadProps) {
           load
         </label>
       </div>
-    </section>
+    </>
   );
 }
 

@@ -6,12 +6,10 @@ interface IButtonReadonlyProps {
 }
 
 function ButtonReadonly(props: IButtonReadonlyProps) {
-  const { modifier } = props;
-
   const isReadonly = useStore(isReadonlyStore);
 
   return (
-    <section className={`readonly ${modifier}__readonly`}>
+    <div>
       <input
         className="input readonly__input visually-hidden"
         type="checkbox"
@@ -25,7 +23,7 @@ function ButtonReadonly(props: IButtonReadonlyProps) {
       <span className="visually-hidden" role="status" aria-live="polite">
         {isReadonly ? "read-only is on" : "read-only is off"}
       </span>
-    </section>
+    </div>
   );
 }
 

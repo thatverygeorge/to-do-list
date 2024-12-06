@@ -30,7 +30,7 @@ function FormAddTask(props: IFormAddTaskProps) {
   }
 
   return (
-    <form className={`form-add-task ${modifier}__form-add-task`} onSubmit={handleSubmit}>
+    <form className={`form-add-task ${modifier}__form-add-task container`} onSubmit={handleSubmit}>
       <TaskEditor modifier="form-add-task" types={taskTypes} defaultType={TaskTypes.WORK} />
 
       <button className="button form-add-task__button-submit" type="submit" disabled={isReadonly}>

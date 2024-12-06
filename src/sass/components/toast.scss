@@ -1,41 +1,33 @@
 @keyframes showToast {
   from {
-    transform: translateY(-500px) translateX(-50%);
+    transform: translateY(-100%) translateX(-50%);
   }
   to {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(150px) translateX(-50%);
   }
 }
 
 .toast {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba($white, 0.7);
+  inset: 0;
+  background-color: transparentize($black, 0.3);
   z-index: 999;
   pointer-events: all;
 
   &__wrapper {
-    position: fixed;
-    top: 150px;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+    transform: translateY(150px) translateX(-50%);
     width: 90%;
     max-width: 650px;
     min-height: 100px;
     height: max-content;
     overflow: hidden;
     padding: 10px 50px;
-    animation: showToast 250ms linear;
     border: 2px solid $yellow;
-    border-radius: 5px;
-    background-color: $white;
+    animation: showToast 250ms linear;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -53,8 +45,8 @@
     right: 10px;
     width: 30px;
     height: 30px;
+    min-height: initial;
     padding: 0;
-    border: 2px solid $yellow;
     outline: none;
     cursor: pointer;
     background-color: transparent;
@@ -67,7 +59,7 @@
       left: 50%;
       width: 2px;
       height: 75%;
-      background-color: $black;
+      background-color: transparentize($black, 0.6);
     }
 
     &::before {
@@ -78,15 +70,12 @@
       transform: translate(-50%, -50%) rotate(45deg);
     }
 
-    &:focus-visible,
+    &:focus,
     &:hover {
-      border-color: $black;
-    }
-
-    &:disabled {
-      opacity: 0.3;
-      border-color: $black;
-      cursor: default;
+      &::before,
+      &::after {
+        background-color: $black;
+      }
     }
   }
 }

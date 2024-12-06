@@ -1,11 +1,7 @@
 .made-by {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 15px;
-  padding: 20px;
-  background-color: $gray;
-  border-radius: 15px;
 
   &__title {
     font-size: 1.25rem;
